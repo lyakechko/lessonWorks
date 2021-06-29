@@ -22,7 +22,14 @@
 <br/>
 <H1 class=h1>JSTL
 </H1>
-<c:out value="${requestScope.myParam}"/>
-<%= request.getAttribute("myParam")%>
+<p>
+    <c:out value="${requestScope.myParam}"/>
+    <%= request.getAttribute("myParam")%>
+</p>
+<select>
+    <c:forEach items="${requestScope.paramList}" var="item">
+        <option>${item}</option>
+    </c:forEach>
+</select>
 </body>
 </html>
